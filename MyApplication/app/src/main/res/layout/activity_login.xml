@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f1f1f3"
+    tools:context="com.example.alan.fluxodetelas.Login">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#1993aa"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="logo"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/bon_profit" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="7dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Login:"
+            app:layout_constraintBottom_toTopOf="@+id/email"
+            app:layout_constraintLeft_toLeftOf="@+id/email"
+            android:layout_marginBottom="9dp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView2"
+            android:background="@drawable/login_bg"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="9dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/email"
+            android:text="Senha:"
+            app:layout_constraintBottom_toTopOf="@+id/senha"
+            app:layout_constraintLeft_toLeftOf="@+id/senha"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="9dp" />
+
+        <EditText
+            android:id="@+id/senha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView4"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/login_bg"
+            android:ems="10"
+            android:inputType="textPersonName|textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/login"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="130dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/senha"
+            android:layout_centerHorizontal="true"
+            android:background="#1995ad"
+            android:onClick="logar"
+            android:text="LOGIN"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toTopOf="@+id/NovaConta"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/NovaConta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:autoLink="web"
+            android:gravity="center"
+            android:onClick="abrirTelaCadastro"
+            android:text="@string/newaccount"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#597485"
+            android:textColorLink="#597485"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="69dp" />
+
+        <TextView
+            android:id="@+id/senhaErrada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="0dp"
+            android:text="Nome de usuário ou senha incorretos"
+            android:textColor="#f00"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintRight_toRightOf="@+id/email" />
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

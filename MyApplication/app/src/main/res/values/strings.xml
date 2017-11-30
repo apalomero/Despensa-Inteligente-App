@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Despensa Inteligente</string>
+    <string name="lostpassword">
+        <a href="http://www.google.com" target="_top">Esqueceu a senha?</a></string>
+    <string name="newaccount">
+        <a href="http://www.google.com" target="_top">Crie uma conta nova</a></string>
+    <string name="title_activity_pagina_inicial">PaginaInicial</string>
+    <string name="title_activity_receitas">Receitas</string>
+    <string name="title_activity_despensas">Despensas</string>
+    <string name="title_activity_produtos">Produtos</string>
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+    <string-array name="categorias_array">
+        <item>Latas</item>
+        <item>Congelados</item>
+        <item>Frutas</item>
+        <item>Grãos</item>
+        <item>Parada louca</item>
+        <item>Tempero</item>
+        <item>Doce</item>
+        <item>Salgado</item>
+    </string-array>
+    <string name="title_activity_add_produto">addProduto</string>
+    <string name="title_activity_detalhes_receita">DetalhesReceita</string>
+    <string name="title_activity_add_despensa">addDespensa</string>
+    <string name="title_activity_detalhes_despensa">detalhesDespensa</string>
+    <string name="title_activity_add_receita">addReceita</string>
+</resources>

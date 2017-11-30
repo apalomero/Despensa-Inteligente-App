@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f2"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.alan.fluxodetelas.Produtos"
+    tools:showIn="@layout/activity_produtos">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Produtos"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textStyle="italic"/>
+
+    <!-- USERNAME INPUT -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_bg"
+        android:focusableInTouchMode="true">
+
+        <!-- INPUT -->
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:layout_toRightOf="@+id/username_icon"
+            android:hint="Busque pelo nome do produto..."
+            android:padding="10dp"
+            android:text="" />
+
+        <!-- ICON -->
+        <ImageView
+            android:id="@+id/username_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:onClick="fazerBuscaIco"
+            android:paddingTop="10dp"
+            android:src="@drawable/search" />
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#c5d8e5"
+            android:paddingLeft="8dp">
+
+            <TextView
+                android:id="@+id/labelCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cat."
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/labelNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/labelMarca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marca"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/labelTipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/labelPeso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Peso (g ou ml)"
+                android:textSize="13sp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <ListView
+        android:id="@+id/listaProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

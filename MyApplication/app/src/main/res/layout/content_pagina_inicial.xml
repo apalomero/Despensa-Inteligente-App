@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.alan.fluxodetelas.PaginaInicial"
+    tools:showIn="@layout/activity_pagina_inicial"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:id="@+id/imgsNav"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:weightSum="3">
+
+
+        <!-- col 1 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:id="@+id/receitas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:onClick="abreReceitas"
+                app:srcCompat="@drawable/receitas" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Receitas"
+                android:textAlignment="center"
+                android:textColor="#25839a"
+                android:textSize="22sp"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+        <!-- col 1 end -->
+        <!-- col 2 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:id="@+id/despensas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:onClick="abreDespensas"
+                app:srcCompat="@drawable/despensas" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Despensas"
+                android:textAlignment="center"
+                android:textColor="#25839a"
+                android:textSize="22sp"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+        <!-- col 2 end -->
+        <!-- col 3 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:id="@+id/produtos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:onClick="abreProdutos"
+                app:srcCompat="@drawable/produtos" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Produtos"
+                android:textAlignment="center"
+                android:textColor="#25839a"
+                android:textSize="22sp"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/favoritos"
+        android:layout_width="match_parent"
+        android:layout_height="151dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Receitas Favoritas"
+            android:textSize="30sp" />
+
+        <HorizontalScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/receitasFavoritas"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="0dp">
+
+            </android.support.v7.widget.RecyclerView>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+    <!-- col 3 end -->
+
+</LinearLayout>
